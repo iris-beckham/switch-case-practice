@@ -15,6 +15,13 @@ describe("getTransportMode", () => {
     expect(actual).toBe(expected);
   });
 
+  it("should return Plane or Train for distances over 50 miles", () => {
+    const input = 400;
+    const actual = getTransportMode(input);
+    const expected = "Plane or Train";
+    expect(actual).toBe(expected);
+  });
+
   it("should return an error for negative distances", () => {
     const input = -3;
     const actual = getTransportMode(input);
